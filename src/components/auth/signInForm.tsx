@@ -77,7 +77,7 @@ export function SignInForm(): React.JSX.Element {
   return (
     <Stack spacing={4}>
       <Stack spacing={1}>
-        <Typography variant="h4">마케팅 코스트센터 대시보드</Typography>
+        <Typography variant="h4">마케팅 비용(품의) 관리 시스템</Typography>
       </Stack>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Stack spacing={2}>
