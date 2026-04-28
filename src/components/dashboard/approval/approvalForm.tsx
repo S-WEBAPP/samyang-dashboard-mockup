@@ -1612,7 +1612,7 @@ function AccountTable({
       <Table size="small" sx={{ border: '1px solid', borderColor: 'divider', minWidth: 860 }}>
         <TableHead>
           <TableRow sx={{ bgcolor: 'primary.main' }}>
-            <TableCell sx={{ color: '#fff', fontWeight: 500, fontSize: '0.7rem', width: 70 }}>구분</TableCell>
+            <TableCell sx={{ color: '#fff', fontWeight: 500, fontSize: '0.7rem', width: 90, whiteSpace: 'nowrap' }}>구분</TableCell>
             {columns.map((c) => (
               <TableCell key={c} sx={{ color: '#fff', fontWeight: 500, fontSize: '0.7rem', whiteSpace: 'nowrap' }}>{c}</TableCell>
             ))}
@@ -1622,7 +1622,7 @@ function AccountTable({
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
-              <TableCell sx={{ bgcolor: 'grey.50', fontWeight: 600, fontSize: '0.7rem' }}>집행계정</TableCell>
+              <TableCell sx={{ bgcolor: 'grey.50', fontWeight: 600, fontSize: '0.7rem', whiteSpace: 'nowrap' }}>집행계정</TableCell>
               {fields.map((f) => (
                 <TableCell key={f}>
                   <TextField size="small" variant="standard" fullWidth value={row[f]} onChange={(e) => { onUpdate(row.id, f, e.target.value); }} inputProps={{ style: ['budget', 'balance', 'amount'].includes(f) ? { textAlign: 'right' } : {} }} />
@@ -1655,7 +1655,7 @@ function TransferTable({
       <Table size="small" sx={{ border: '1px solid', borderColor: 'divider', minWidth: 900 }}>
         <TableHead>
           <TableRow sx={{ bgcolor: 'primary.main' }}>
-            <TableCell sx={{ color: '#fff', fontWeight: 500, fontSize: '0.7rem', width: 70 }}>구분</TableCell>
+            <TableCell sx={{ color: '#fff', fontWeight: 500, fontSize: '0.7rem', width: 90, whiteSpace: 'nowrap' }}>구분</TableCell>
             {cols.map((c) => (
               <TableCell key={c} sx={{ color: '#fff', fontWeight: 500, fontSize: '0.7rem', whiteSpace: 'nowrap' }}>{c}</TableCell>
             ))}
@@ -1665,7 +1665,7 @@ function TransferTable({
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
-              <TableCell sx={{ bgcolor: 'grey.50', fontWeight: 600, fontSize: '0.7rem' }}>{row.type}</TableCell>
+              <TableCell sx={{ bgcolor: 'grey.50', fontWeight: 600, fontSize: '0.7rem', whiteSpace: 'nowrap' }}>{row.type}</TableCell>
               {fields.map((f) => (
                 <TableCell key={f}>
                   <TextField size="small" variant="standard" fullWidth value={row[f]} onChange={(e) => { onUpdate(row.id, f, e.target.value); }} inputProps={{ style: ['budget', 'balance', 'transferAmt'].includes(f) ? { textAlign: 'right' } : {} }} />
