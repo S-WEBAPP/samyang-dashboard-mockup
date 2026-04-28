@@ -22,6 +22,7 @@ export function SideNav(): React.JSX.Element {
 
   return (
     <Box
+      className="no-print"
       sx={{
         '--SideNav-background': '#323232',
         '--SideNav-color': '#FFFFFF',
