@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { Metadata } from 'next';
-import RouterLink from 'next/link';
+import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -30,14 +30,11 @@ export default function NotFound(): React.JSX.Element {
         <Typography color="text.secondary" variant="body1" sx={{ textAlign: 'center' }}>
           You either tried some shady route or you came here by mistake. Whichever it is, try using the navigation
         </Typography>
-        <Button
-          component={RouterLink}
-          href={paths.home}
-          startIcon={<ArrowLeftIcon fontSize="var(--icon-fontSize-md)" />}
-          variant="contained"
-        >
-          Go back to home
-        </Button>
+        <Link href={paths.home} style={{ textDecoration: 'none' }}>
+          <Button startIcon={<ArrowLeftIcon fontSize="var(--icon-fontSize-md)" />} variant="contained">
+            Go back to home
+          </Button>
+        </Link>
       </Stack>
     </Box>
   );
