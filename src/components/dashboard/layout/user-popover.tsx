@@ -10,7 +10,6 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import { GearSixIcon } from '@phosphor-icons/react/dist/ssr/GearSix';
 import { SignOutIcon } from '@phosphor-icons/react/dist/ssr/SignOut';
-import { UserIcon } from '@phosphor-icons/react/dist/ssr/User';
 
 import { paths } from '@/paths';
 import { authClient } from '@/lib/auth/client';

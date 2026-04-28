@@ -56,10 +56,10 @@ const periodData: Record<Period, PeriodData> = {
     },
     visitorLabels: ['1주차', '2주차', '3주차', '4주차'],
     visitorSeries: [
-      { name: '검색광고', data: [58000, 62000, 65000, 68000] },
-      { name: 'SNS',    data: [34000, 37000, 39000, 40500] },
-      { name: '이메일', data: [15000, 17500, 18200, 19200] },
-      { name: '직접유입', data: [21000, 23000, 24500, 25000] },
+      { name: '검색광고', data: [58_000, 62_000, 65_000, 68_000] },
+      { name: 'SNS',    data: [34_000, 37_000, 39_000, 40_500] },
+      { name: '이메일', data: [15_000, 17_500, 18_200, 19_200] },
+      { name: '직접유입', data: [21_000, 23_000, 24_500, 25_000] },
     ],
     channelDistribution: [
       { label: '검색광고', visitors: 119_500, pct: 48 },
@@ -79,7 +79,7 @@ const periodData: Record<Period, PeriodData> = {
       { label: '노출 (Impression)', value: 3_840_000, color: 'var(--mui-palette-primary-main)' },
       { label: '방문 (Visit)',      value:   248_500, color: 'var(--mui-palette-info-main)' },
       { label: '클릭 (Click)',      value:    83_400, color: 'var(--mui-palette-warning-main)' },
-      { label: '전환 (Conversion)', value:     6_645, color: 'var(--mui-palette-success-main)' },
+      { label: '전환 (Conversion)', value:     6645, color: 'var(--mui-palette-success-main)' },
     ],
   },
 
@@ -168,7 +168,7 @@ const campaigns: Campaign[] = [
     budget: 5_000_000,
     spent: 4_250_000,
     clicks: 128_400,
-    conversions: 3_842,
+    conversions: 3842,
     status: 'active',
   },
   {
@@ -178,7 +178,7 @@ const campaigns: Campaign[] = [
     budget: 3_000_000,
     spent: 2_900_000,
     clicks: 87_300,
-    conversions: 1_204,
+    conversions: 1204,
     status: 'active',
   },
   {

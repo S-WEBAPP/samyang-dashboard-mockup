@@ -1,14 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import RouterLink from 'next/link';
 import { useRouter } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Alert from '@mui/material/Alert';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import InputLabel from '@mui/material/InputLabel';
-import Link from '@mui/material/Link';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -17,7 +15,6 @@ import { EyeSlashIcon } from '@phosphor-icons/react/dist/ssr/EyeSlash';
 import { Controller, useForm } from 'react-hook-form';
 import { z as zod } from 'zod';
 
-import { paths } from '@/paths';
 import { authClient } from '@/lib/auth/client';
 import { useUser } from '@/hooks/use-user';
 import { styled } from '@mui/material/styles';
@@ -70,7 +67,7 @@ export function SignInForm(): React.JSX.Element {
     [checkSession, router, setError]
   );
 
-  const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  const ColorButton = styled(Button)<ButtonProps>(() => ({
     backgroundColor: '#FF6400',
     '&:hover': {
       backgroundColor: '#FF6400',

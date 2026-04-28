@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import RouterLink from 'next/link';
 import Box from '@mui/material/Box';
 
 import { DynamicLogo } from '@/components/core/logo';

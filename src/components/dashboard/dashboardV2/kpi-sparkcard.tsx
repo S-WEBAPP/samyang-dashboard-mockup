@@ -87,7 +87,7 @@ export function KpiSparkcard({
             type="area"
             width="100%"
           />
-          {diff !== undefined ? (
+          {diff === undefined ? null : (
             <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
               <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
                 <TrendIcon color={trendColor} fontSize="var(--icon-fontSize-sm)" />
@@ -100,7 +100,7 @@ export function KpiSparkcard({
                 {diffLabel}
               </Typography>
             </Stack>
-          ) : null}
+          )}
         </Stack>
       </CardContent>
     </Card>

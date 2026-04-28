@@ -36,7 +36,7 @@ export function ConversionFunnel({ steps, sx }: ConversionFunnelProps): React.JS
 
             return (
               <React.Fragment key={step.label}>
-                {dropRate !== null ? (
+                {dropRate === null ? null : (
                   <Stack
                     direction="row"
                     spacing={0.5}
@@ -50,7 +50,7 @@ export function ConversionFunnel({ steps, sx }: ConversionFunnelProps): React.JS
                       {dropRate}% 이탈
                     </Typography>
                   </Stack>
-                ) : null}
+                )}
                 <Box>
                   <Stack
                     direction="row"
