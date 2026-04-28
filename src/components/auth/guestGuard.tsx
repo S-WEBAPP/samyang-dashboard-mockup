@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation';
 import Alert from '@mui/material/Alert';
 
 import { paths } from '@/paths';
-import { logger } from '@/lib/defaultLogger';
-import { useUser } from '@/hooks/useUser';
+import { logger } from '@/lib/default-logger';
+import { useUser } from '@/hooks/use-user';
 
 export interface GuestGuardProps {
   children: React.ReactNode;
@@ -29,18 +29,7 @@ export function GuestGuard({ children }: GuestGuardProps): React.JSX.Element | n
 
     if (user) {
       logger.debug('[GuestGuard]: User is logged in, redirecting to dashboard');
-      
-      if(user?.auth == 'ROLE_ADMIN'){
-        router.replace(paths.admin.overview);
-      }else if(user?.auth == 'ROLE_HILL'){
-        router.replace(paths.hill.today);
-      }else if(user?.auth == 'ROLE_SMS'){
-        router.replace(paths.sms.send);
-      }else if(user?.auth == 'ROLE_SMS_LS'){
-        router.replace(paths.smsls.send);
-      }else{
-        router.replace(paths.sy.overview);
-      }
+      router.replace(paths.dashboard.overview);
       return;
     }
 
